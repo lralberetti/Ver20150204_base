@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
     
     printf("Inserisci %d valori interi POSITIVI\n", SIZE);
     // inserisci il codice necessario all'inserimento dei valori nell'array v
-    for (i=0;i<SIZE;i++);
+    for (i=0;i<SIZE;i++); // CORR Lorenzo, l'errore del tuo codice si trova in questo punto e virgola: rimuovilo e verifica. Sai motivare cosa accade?
     {
         scanf("%d",&(v[i]));
     }
@@ -72,7 +72,7 @@ float media(int valori[], int n) {
     {
         somma=somma+valori[i];
     }
-    med=somma/n;
+    med=somma/n; // CORR Necessario eseguire il casting di almeno uno dei due operandi
     return med;
 }
 
@@ -95,7 +95,7 @@ int quoziente(int dividendo, int divisore) {
     if(dividendo/divisore>=0)
     {
         r=dividendo/divisore
-    };
+    }; // CORR Errore di sintassi
     
     return r;   
 }
@@ -106,7 +106,9 @@ int quoziente(int dividendo, int divisore) {
  */
 int restoDivisione(int dividendo, int divisore) {
     int r;
-    r=dividendo/divisore;
+    r=dividendo/divisore; // CORR Istruzione errata
+    // CORR Istruzione corretta
+    // r = dividendo % divisore;
     return r;
 }
 
@@ -116,7 +118,7 @@ int restoDivisione(int dividendo, int divisore) {
  * La parte decimale è, ovviamente, sempre inferiore a 1.
  */
 float parteDecimaleDivisione(int dividendo, int divisore) {
-    
+    // CORR Non svolta
     return -1;
 }
 
